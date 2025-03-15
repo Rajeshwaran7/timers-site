@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { EnvelopeIcon, PhoneIcon, MapPinIcon } from '@heroicons/react/24/outline';
+import logoImage from '../../assets/images/kandhaleela-logo.svg';
 
 const Footer: React.FC = () => {
   return (
@@ -9,7 +10,14 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-lg font-bold text-primary-600 dark:text-primary-400 mb-4">Kandha Leela Timbers</h3>
+            <div className="flex items-center mb-4">
+              <img 
+                src={logoImage} 
+                alt="Kandhaleela Timber" 
+                className="h-10 w-auto mr-2" 
+              />
+              <h3 className="text-lg font-bold text-primary-600 dark:text-primary-400">Kandhaleela Timber</h3>
+            </div>
             <p className="text-gray-600 dark:text-gray-300 mb-4">
               Crafting premium teak furniture with traditional craftsmanship and modern design since 2000.
             </p>
@@ -110,7 +118,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-200 dark:border-gray-700 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-500 dark:text-gray-400 text-sm">
-              &copy; {new Date().getFullYear()} Kandha Leela Timbers. All rights reserved.
+              &copy; {new Date().getFullYear()} Kandhaleela Timber. All rights reserved.
             </p>
             <div className="mt-4 md:mt-0">
               <ul className="flex space-x-6">

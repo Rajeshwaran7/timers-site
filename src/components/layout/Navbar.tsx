@@ -4,6 +4,7 @@ import { Disclosure, Transition } from '@headlessui/react';
 import { ShoppingCartIcon, MagnifyingGlassIcon, SunIcon, MoonIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { ThemeContext } from '../../context/ThemeContext';
 import { CartContext } from '../../context/CartContext';
+import logoImage from '../../assets/images/kandhaleela-logo.svg';
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -40,7 +41,12 @@ const Navbar: React.FC = () => {
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex-shrink-0 flex items-center">
                   <Link to="/" className="flex items-center">
-                    <span className="text-primary-600 dark:text-primary-400 text-2xl font-serif font-bold">Kandha Leela Timbers </span>
+                    <img 
+                      src={logoImage} 
+                      alt="Kandhaleela Timber" 
+                      className="h-10 w-auto mr-2" 
+                    />
+                    <span className="text-primary-600 dark:text-primary-400 text-xl font-serif font-bold">Kandhaleela Timber</span>
                   </Link>
                 </div>
                 
